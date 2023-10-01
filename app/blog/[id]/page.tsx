@@ -17,10 +17,6 @@ async function getData(id: string) {
     return response.json();
 }
 
-export const metadata: Metadata = {
-    title: 'About',
-}
-
 export async function generateMetadata({params:{id}}:Props) : Promise<Metadata> {
     const post = await getData(id);
 
